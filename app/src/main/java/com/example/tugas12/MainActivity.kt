@@ -4,6 +4,7 @@ import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.example.tugas12.Retrofit.ApiClient
 import com.example.tugas12.databinding.ActivityMainBinding
 import com.example.tugas12.model.Pengungsi
@@ -37,7 +38,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Pengungsi>, t: Throwable) {
-
+                Toast.makeText(this@MainActivity, "Koneksi error",
+                    Toast.LENGTH_LONG).show()
             }
         }
         )
