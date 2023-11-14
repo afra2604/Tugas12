@@ -1,4 +1,4 @@
-package com.example.tugas12.Retrofit
+package com.example.tugas12.retrofit
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -14,11 +14,12 @@ object ApiClient {
             .addInterceptor(interceptor)
             .build()
         val builder = Retrofit.Builder()
-            .baseUrl("https://dummy.restapiexample.com/api/v1/")
+            .baseUrl("https://www.refugerestrooms.org/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
         return builder.create(ApiService::class.java)
 
     }
+
 }
