@@ -5,6 +5,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
+//untuk mengambil data di url
 object ApiClient {
     fun getInstance() : ApiService {
         val interceptor = HttpLoggingInterceptor()

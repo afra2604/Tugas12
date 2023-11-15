@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
+    //mendeklarasi variabel pengungsiName
     private lateinit var pengungsiName: ArrayList<Data>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<ArrayList<Data>>, t: Throwable) {
-                // Handle failure
+                //  Menangani kasus ketika permintaan jaringan gagal
             }
         }
         )
